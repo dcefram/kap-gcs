@@ -1,13 +1,6 @@
 "use strict";
 const { Storage } = require("@google-cloud/storage");
 
-const CONTENT_TYPES = new Map([
-  [".gif", "image/gif"],
-  [".mp4", "video/mp4"],
-  [".webm", "video/webm"],
-  [".apng", "image/apng"],
-]);
-
 const action = async (ctx) => {
   const filePath = await ctx.filePath();
 
