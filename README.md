@@ -8,4 +8,4 @@ In the `Kap` menu, go to `Preferences…`, select the `Plugins` pane, find this 
 
 ## Usage
 
-In the editor, after recording, select one of the export formats, and then `Share on GCP`.
+In the editor, after recording, select one of the export formats, and then `Upload to GCP`.
