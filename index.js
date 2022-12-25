@@ -29,7 +29,7 @@ const action = async (ctx) => {
   ctx.notify("Google Cloud Storage Public URL copied to clipboard");
 };
 
-const gcp = {
+const gcs = {
   title: "Upload to GCS",
   formats: ["gif", "mp4", "webm", "apng"],
   config: {
@@ -52,4 +52,4 @@ const gcp = {
   action,
 };
 
-exports.shareServices = [gcp];
+exports.shareServices = [gcs];
