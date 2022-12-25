@@ -1,0 +1,31 @@
+{
+  "name": "kap-gcs",
+  "version": "0.1.0",
+  "description": "Kap plugin to upload kaptures to Google Cloud Storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "kap-plugin",
+    "gcs",
+    "google",
+    "cloud",
+    "storage",
+    "upload"
+  ],
+  "author": {
+    "name": "Daniel Cefram Ramirez",
+    "email": "dcefram@icloud.com",
+    "url": "rmrz.ph"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^6.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "kap-plugin-test": "^0.5.0",
+    "prettier": "^2.8.1"
+  }
+}
