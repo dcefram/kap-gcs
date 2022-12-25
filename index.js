@@ -30,7 +30,7 @@ const action = async (ctx) => {
 };
 
 const gcp = {
-  title: "Upload to GCP",
+  title: "Upload to GCS",
   formats: ["gif", "mp4", "webm", "apng"],
   config: {
     projectId: {

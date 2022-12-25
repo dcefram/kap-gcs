@@ -3,7 +3,7 @@ const { Storage } = require("@google-cloud/storage");
 
 jest.mock("@google-cloud/storage");
 
-describe("kap-gcp", () => {
+describe("kap-gcs", () => {
   const mockPublicUrl = "mock-public-url";
   let uploadFn = jest.fn(() =>
     Promise.resolve([{ publicUrl: jest.fn(() => mockPublicUrl) }])
