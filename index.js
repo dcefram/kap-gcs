@@ -16,7 +16,14 @@ const action = async (ctx) => {
   // upload file
   const [file] = await bucket.upload(filePath, { public: true });
 
-  const publicUrl = file.publicUrl();
+  let publicUrl = file.publicUrl();
+
+  if (ctx.config.get("alias")) {
+    const lastIndexOfSep = publicUrl.lastIndexOf("/");
+    publicUrl = `${ctx.config.get("alias")}${publicUrl.slice(
+      lastIndexOfSep + 1
+    )}`;
+  }
 
   ctx.copyToClipboard(publicUrl);
   ctx.notify("Google Cloud Storage Public URL copied to clipboard");
@@ -40,6 +47,11 @@ const gcs = {
       title: "Bucket Name",
       type: "string",
       required: true,
+    },
+    alias: {
+      title: "Alias",
+      type: "string",
+      required: false,
     },
   },
   action,
